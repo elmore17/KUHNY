@@ -1,0 +1,48 @@
+<div class="offcanvas offcanvas-start d-flex flex-column flex-shrink-0" tabindex="-1" id="offcanvasExample"
+     aria-labelledby="offcanvasExampleLabel" style="width: 4.5rem; background: #fcebe3;">
+    <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+        <a href="/" class="nav-link py-3 border-bottom" aria-current="page" title="" data-bs-toggle="tooltip"
+           data-bs-placement="right" data-bs-original-title="KUХНЯ">
+            <img src="../static/icon/icon-navbar.svg" style="width: 32px;">
+            <span class="visually-hidden">KUХНЯ</span>
+        </a>
+        <li>
+            <a href="/about" class="nav-link py-3 border-bottom" title="" data-bs-toggle="tooltip"
+               data-bs-placement="right" data-bs-original-title="About">
+                <img src="../static/icon/profile.svg" style="width: 32px;">
+            </a>
+        </li>
+        <li>
+            <a href="/food" class="nav-link py-3 border-bottom" title="" data-bs-toggle="tooltip"
+               data-bs-placement="right" data-bs-original-title="Food">
+                <img src="../static/icon/sovety_pitaniy.svg" style="width: 32px;">
+            </a>
+        </li>
+        <li>
+            <a href="/map" class="nav-link py-3 border-bottom" title="" data-bs-toggle="tooltip"
+               data-bs-placement="right" data-bs-original-title="Map">
+                <img src="../static/icon/map.svg" style="width: 32px;">
+            </a>
+        </li>
+    </ul>
+    <div class="dropdown border-top" style="background: #fff;">
+        <a href="#"
+           class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle"
+           id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="{{ current_user.photoLink }}" alt="mdo" width="24" height="24" class="rounded-circle">
+        </a>
+        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
+            {% if current_user.is_authenticated %}
+            <li><a class="dropdown-item" href="/favorites">Favorites</a></li>
+                <li><a class="dropdown-item" href="/account">Profile</a></li>
+                <li><a class="dropdown-item" href="/addrecipe">Add recipe</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="/signout">Sign out</a></li>
+            {% else %}
+                <li><a class="dropdown-item" href="/signin">Sign in</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</div>

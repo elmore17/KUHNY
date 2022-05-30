@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="System"?>
+<database>
+    <name>kuxny</name>
+    <table>
+        <database></database>
+        <name>recipes</name>
+        <ddl><![CDATA[CREATE TABLE recipes (
+        	id INTEGER NOT NULL, 
+        	name VARCHAR(30) NOT NULL, 
+        	"photoLink" VARCHAR(500) NOT NULL, 
+        	title VARCHAR(300) NOT NULL, 
+        	steps BLOB NOT NULL, 
+        	calories INTEGER NOT NULL, 
+        	fats INTEGER NOT NULL, 
+        	proteins INTEGER NOT NULL, 
+        	carbohydrates INTEGER NOT NULL, 
+        	PRIMARY KEY (id)
+        )]]></ddl>
+        <columns>
+            <column>
+                <name>id</name>
+                <type>INTEGER</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>name</name>
+                <type>VARCHAR</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>photoLink</name>
+                <type>VARCHAR</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>title</name>
+                <type>VARCHAR</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>steps</name>
+                <type>BLOB</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>calories</name>
+                <type>INTEGER</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>fats</name>
+                <type>INTEGER</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>proteins</name>
+                <type>INTEGER</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>carbohydrates</name>
+                <type>INTEGER</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+        </columns>
+        <constraints>
+            <constraint>
+                <type>PRIMARY KEY</type>
+                <definition>PRIMARY KEY (id)
+                </definition>
+            </constraint>
+        </constraints>
+        <rows>
+        </rows>
+    </table>
+    <table>
+        <database></database>
+        <name>users</name>
+        <ddl><![CDATA[CREATE TABLE users (
+        	id INTEGER NOT NULL, 
+        	name VARCHAR(30) NOT NULL, 
+        	email VARCHAR(30) NOT NULL, 
+        	"photoLink" VARCHAR(500), 
+        	password VARCHAR(30) NOT NULL, 
+        	favorites BLOB, 
+        	added BLOB, 
+        	PRIMARY KEY (id)
+        )]]></ddl>
+        <columns>
+            <column>
+                <name>id</name>
+                <type>INTEGER</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>name</name>
+                <type>VARCHAR</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>email</name>
+                <type>VARCHAR</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>photoLink</name>
+                <type>VARCHAR</type>
+            </column>
+            <column>
+                <name>password</name>
+                <type>VARCHAR</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>favorites</name>
+                <type>BLOB</type>
+            </column>
+            <column>
+                <name>added</name>
+                <type>BLOB</type>
+            </column>
+        </columns>
+        <constraints>
+            <constraint>
+                <type>PRIMARY KEY</type>
+                <definition>PRIMARY KEY (id)
+                </definition>
+            </constraint>
+        </constraints>
+        <rows>
+            <row>
+                <value column="0">1</value>
+                <value column="1">Maxim Odinokov</value>
+                <value column="2">maxim@mail.ru</value>
+                <value column="3">static\images\c5nXI0sC5N-ljfgw_vcC3kzFNYP18bGNnKdZhRkMnVE_meka4X5h_vLOJaqOebpNj7BraJ_fD4dJ71ATVqlr8a7z.jpg</value>
+                <value column="4">pbkdf2:sha256:260000$PIIaAYrk7qUzGBeL$bbe4104cdea15fcaa06b6378645c439baee2d621193969c617634c564788ce6b</value>
+                <value column="5" null="true"/>
+                <value column="6" null="true"/>
+            </row>
+        </rows>
+    </table>
+</database>
